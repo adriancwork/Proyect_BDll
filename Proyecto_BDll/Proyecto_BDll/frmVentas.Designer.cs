@@ -1,6 +1,6 @@
 ﻿namespace Proyecto_BDll
 {
-    partial class frmMenu
+    partial class frmVentas
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // frmMenu
+            // frmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(526, 412);
-            this.Name = "frmMenu";
-            this.Text = "Menu";
+            this.ClientSize = new System.Drawing.Size(700, 249);
+            this.Name = "frmVentas";
+            this.Text = "frmVentas";
+            this.Load += new System.EventHandler(this.frmVentas_Load);
             this.ResumeLayout(false);
 
         }
