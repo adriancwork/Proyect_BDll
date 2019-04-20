@@ -28,13 +28,12 @@ namespace Proyecto_BDll
 
         private void frmTrabajadores_Load(object sender, EventArgs e)
         {
-
+            
         }
 
-        private void frmTrabajadores_FormClosed(object sender, FormClosedEventArgs e)
+        private void btnSalir_frmTrabajadores_Click(object sender, EventArgs e)
         {
-            
-            
+            this.Close();
         }
     }
 }
