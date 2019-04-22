@@ -99,5 +99,12 @@ namespace Proyecto_BDll
         void frmVentas_FormClosed(object sender, FormClosedEventArgs e) {
             this.Show();
         }
+
+        //Boton de salida frmMenu
+        private void btnSalir_frmMenu_Click(object sender, EventArgs e)
+        {
+            Menu_sqlcnn.Close();
+            this.Close();
+        }
     }
 }

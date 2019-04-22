@@ -33,6 +33,7 @@
             this.btnMuebleria_frmMenu = new System.Windows.Forms.Button();
             this.btnVentas_frmMenu = new System.Windows.Forms.Button();
             this.picBox_Logo_frmMenu = new System.Windows.Forms.PictureBox();
+            this.btnSalir_frmMenu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.picBox_Logo_frmMenu)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,12 +91,23 @@
             this.picBox_Logo_frmMenu.TabIndex = 4;
             this.picBox_Logo_frmMenu.TabStop = false;
             // 
+            // btnSalir_frmMenu
+            // 
+            this.btnSalir_frmMenu.Location = new System.Drawing.Point(361, 128);
+            this.btnSalir_frmMenu.Name = "btnSalir_frmMenu";
+            this.btnSalir_frmMenu.Size = new System.Drawing.Size(94, 23);
+            this.btnSalir_frmMenu.TabIndex = 5;
+            this.btnSalir_frmMenu.Text = "Salir";
+            this.btnSalir_frmMenu.UseVisualStyleBackColor = true;
+            this.btnSalir_frmMenu.Click += new System.EventHandler(this.btnSalir_frmMenu_Click);
+            // 
             // frmMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnProveedores_frmMenu;
             this.ClientSize = new System.Drawing.Size(467, 292);
+            this.Controls.Add(this.btnSalir_frmMenu);
             this.Controls.Add(this.picBox_Logo_frmMenu);
             this.Controls.Add(this.btnVentas_frmMenu);
             this.Controls.Add(this.btnMuebleria_frmMenu);
@@ -120,5 +132,6 @@
         private System.Windows.Forms.Button btnMuebleria_frmMenu;
         private System.Windows.Forms.Button btnVentas_frmMenu;
         private System.Windows.Forms.PictureBox picBox_Logo_frmMenu;
+        private System.Windows.Forms.Button btnSalir_frmMenu;
     }
 }

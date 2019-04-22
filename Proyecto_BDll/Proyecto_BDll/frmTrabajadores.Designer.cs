@@ -54,6 +54,7 @@
             this.btnInserat_Actualizar_frmTrabajadores.TabIndex = 5;
             this.btnInserat_Actualizar_frmTrabajadores.Text = "Insertar/Actualizar";
             this.btnInserat_Actualizar_frmTrabajadores.UseVisualStyleBackColor = true;
+            this.btnInserat_Actualizar_frmTrabajadores.Click += new System.EventHandler(this.btnInserat_Actualizar_frmTrabajadores_Click);
             // 
             // btnConsultar_frmTrabajadores
             // 
@@ -63,6 +64,7 @@
             this.btnConsultar_frmTrabajadores.TabIndex = 6;
             this.btnConsultar_frmTrabajadores.Text = "Consultar";
             this.btnConsultar_frmTrabajadores.UseVisualStyleBackColor = true;
+            this.btnConsultar_frmTrabajadores.Click += new System.EventHandler(this.btnConsultar_frmTrabajadores_Click);
             // 
             // btnBorrar_frmTrabajadores
             // 
@@ -72,6 +74,7 @@
             this.btnBorrar_frmTrabajadores.TabIndex = 7;
             this.btnBorrar_frmTrabajadores.Text = "Borrar";
             this.btnBorrar_frmTrabajadores.UseVisualStyleBackColor = true;
+            this.btnBorrar_frmTrabajadores.Click += new System.EventHandler(this.btnBorrar_frmTrabajadores_Click);
             // 
             // btnLimpiar_frmTrabajadores
             // 
@@ -81,6 +84,7 @@
             this.btnLimpiar_frmTrabajadores.TabIndex = 8;
             this.btnLimpiar_frmTrabajadores.Text = "Limpiar";
             this.btnLimpiar_frmTrabajadores.UseVisualStyleBackColor = true;
+            this.btnLimpiar_frmTrabajadores.Click += new System.EventHandler(this.btnLimpiar_frmTrabajadores_Click);
             // 
             // txtbxNombre_frmTrabajadores
             // 
@@ -165,11 +169,12 @@
             // 
             // txtbxID_frmTrabajadores
             // 
-            this.txtbxID_frmTrabajadores.Enabled = false;
+            this.txtbxID_frmTrabajadores.AccessibleDescription = "";
             this.txtbxID_frmTrabajadores.Location = new System.Drawing.Point(89, 12);
             this.txtbxID_frmTrabajadores.Name = "txtbxID_frmTrabajadores";
             this.txtbxID_frmTrabajadores.Size = new System.Drawing.Size(99, 20);
             this.txtbxID_frmTrabajadores.TabIndex = 0;
+            this.txtbxID_frmTrabajadores.Tag = "";
             // 
             // btnSalir_frmTrabajadores
             // 
