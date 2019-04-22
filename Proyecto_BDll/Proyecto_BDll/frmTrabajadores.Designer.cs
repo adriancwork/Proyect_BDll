@@ -207,6 +207,7 @@
             this.Controls.Add(this.btnBorrar_frmTrabajadores);
             this.Controls.Add(this.btnConsultar_frmTrabajadores);
             this.Controls.Add(this.btnInserat_Actualizar_frmTrabajadores);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmTrabajadores";

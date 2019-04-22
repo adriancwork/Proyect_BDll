@@ -183,10 +183,6 @@ namespace Proyecto_BDll
             catch (SqlException ) {
                 MessageBox.Show("No existe Id para consultar");
             }
-
-            
-
-
         }
 
         //Boton de limpiar

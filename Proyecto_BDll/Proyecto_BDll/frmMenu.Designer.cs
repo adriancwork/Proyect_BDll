@@ -113,6 +113,7 @@
             this.Controls.Add(this.btnMuebleria_frmMenu);
             this.Controls.Add(this.btnProveedores_frmMenu);
             this.Controls.Add(this.btnTrabajadores_frmMenu);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmMenu";
