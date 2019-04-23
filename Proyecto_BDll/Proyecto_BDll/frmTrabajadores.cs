@@ -85,7 +85,7 @@ namespace Proyecto_BDll
                     consultar_sqldatareader.Close();
 
                     //se corre procedimiento almacenado
-                    strInsertar = "EXECUTE INSERT_TRABAJADOR_FRMTRABAJADORES " + Id + ",'"+ Nombre +"', '"+ Puesto +"', " + Salario + ", '"+ FechaNac + "'";
+                    strInsertar = "EXECUTE INSERTAR_TRABAJADOR_FRMTRABAJADORES " + Id + ",'"+ Nombre +"', '"+ Puesto +"', " + Salario + ", '"+ FechaNac + "'";
 
                     SqlCommand insertar_sqlCommand = new SqlCommand(strInsertar, Trabajadores_sqlcnn);
                     insertar_sqlCommand.ExecuteNonQuery();
@@ -127,10 +127,7 @@ namespace Proyecto_BDll
                 else
                 {
                     //Borra todo en los campos de frmTrabajadores
-                    txtbxNombre_frmTrabajadores.Text = "";
-                    txtbxPuesto_frmTrabajadores.Text = "";
-                    txtbxSalario_frmTrabajadores.Text = "";
-                    dtpFechaNacimiento_frmTrabajadores.Value = DateTime.Now;
+                    btnLimpiar_frmTrabajadores.PerformClick();
                     MessageBox.Show("No existe registro con el id indicado");
                 }
                 consultar_sqldatareader.Close();

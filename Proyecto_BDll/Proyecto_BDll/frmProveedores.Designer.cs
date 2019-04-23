@@ -115,6 +115,7 @@
             this.btnInsertar_Actualizar_frmProveedores.TabIndex = 8;
             this.btnInsertar_Actualizar_frmProveedores.Text = "Insertar/Actualizar";
             this.btnInsertar_Actualizar_frmProveedores.UseVisualStyleBackColor = true;
+            this.btnInsertar_Actualizar_frmProveedores.Click += new System.EventHandler(this.btnInsertar_Actualizar_frmProveedores_Click);
             // 
             // btnConsultar_frmProveedores
             // 
@@ -124,6 +125,7 @@
             this.btnConsultar_frmProveedores.TabIndex = 9;
             this.btnConsultar_frmProveedores.Text = "Consultar";
             this.btnConsultar_frmProveedores.UseVisualStyleBackColor = true;
+            this.btnConsultar_frmProveedores.Click += new System.EventHandler(this.btnConsultar_frmProveedores_Click);
             // 
             // btnBorrar_frmProveedores
             // 
@@ -133,6 +135,7 @@
             this.btnBorrar_frmProveedores.TabIndex = 10;
             this.btnBorrar_frmProveedores.Text = "Borrar";
             this.btnBorrar_frmProveedores.UseVisualStyleBackColor = true;
+            this.btnBorrar_frmProveedores.Click += new System.EventHandler(this.btnBorrar_frmProveedores_Click);
             // 
             // btnLimpiar_frmProveedores
             // 
@@ -142,21 +145,23 @@
             this.btnLimpiar_frmProveedores.TabIndex = 11;
             this.btnLimpiar_frmProveedores.Text = "Limpiar";
             this.btnLimpiar_frmProveedores.UseVisualStyleBackColor = true;
+            this.btnLimpiar_frmProveedores.Click += new System.EventHandler(this.btnLimpiar_frmProveedores_Click);
             // 
             // btnSalir_frmProveedores
             // 
-            this.btnSalir_frmProveedores.Location = new System.Drawing.Point(268, 117);
+            this.btnSalir_frmProveedores.Location = new System.Drawing.Point(268, 114);
             this.btnSalir_frmProveedores.Name = "btnSalir_frmProveedores";
             this.btnSalir_frmProveedores.Size = new System.Drawing.Size(104, 23);
             this.btnSalir_frmProveedores.TabIndex = 12;
             this.btnSalir_frmProveedores.Text = "Salir";
             this.btnSalir_frmProveedores.UseVisualStyleBackColor = true;
+            this.btnSalir_frmProveedores.Click += new System.EventHandler(this.btnSalir_frmProveedores_Click);
             // 
             // frmProveedores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(383, 149);
+            this.ClientSize = new System.Drawing.Size(383, 147);
             this.Controls.Add(this.btnSalir_frmProveedores);
             this.Controls.Add(this.btnLimpiar_frmProveedores);
             this.Controls.Add(this.btnBorrar_frmProveedores);
