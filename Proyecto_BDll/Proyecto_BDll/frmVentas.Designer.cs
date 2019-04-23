@@ -41,6 +41,10 @@
             this.btnLimpiar_frmVentas = new System.Windows.Forms.Button();
             this.btnSalir_frmVentas = new System.Windows.Forms.Button();
             this.dtpFechaVenta_frmVentas = new System.Windows.Forms.DateTimePicker();
+            this.btnIngresarVenta_frmVentas = new System.Windows.Forms.Button();
+            this.btnEliminarVentas_frmVentas = new System.Windows.Forms.Button();
+            this.btnAjustarVentas_frmVentas = new System.Windows.Forms.Button();
+            this.btnVerDetalle_frmVentas = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblID_frmVentas
@@ -142,7 +146,7 @@
             // 
             // btnSalir_frmVentas
             // 
-            this.btnSalir_frmVentas.Location = new System.Drawing.Point(309, 116);
+            this.btnSalir_frmVentas.Location = new System.Drawing.Point(309, 349);
             this.btnSalir_frmVentas.Name = "btnSalir_frmVentas";
             this.btnSalir_frmVentas.Size = new System.Drawing.Size(114, 23);
             this.btnSalir_frmVentas.TabIndex = 12;
@@ -157,11 +161,51 @@
             this.dtpFechaVenta_frmVentas.Size = new System.Drawing.Size(203, 20);
             this.dtpFechaVenta_frmVentas.TabIndex = 7;
             // 
+            // btnIngresarVenta_frmVentas
+            // 
+            this.btnIngresarVenta_frmVentas.Location = new System.Drawing.Point(309, 138);
+            this.btnIngresarVenta_frmVentas.Name = "btnIngresarVenta_frmVentas";
+            this.btnIngresarVenta_frmVentas.Size = new System.Drawing.Size(114, 23);
+            this.btnIngresarVenta_frmVentas.TabIndex = 13;
+            this.btnIngresarVenta_frmVentas.Text = "Ingresar Venta";
+            this.btnIngresarVenta_frmVentas.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminarVentas_frmVentas
+            // 
+            this.btnEliminarVentas_frmVentas.Location = new System.Drawing.Point(309, 167);
+            this.btnEliminarVentas_frmVentas.Name = "btnEliminarVentas_frmVentas";
+            this.btnEliminarVentas_frmVentas.Size = new System.Drawing.Size(114, 22);
+            this.btnEliminarVentas_frmVentas.TabIndex = 14;
+            this.btnEliminarVentas_frmVentas.Text = "Eliminar Venta";
+            this.btnEliminarVentas_frmVentas.UseVisualStyleBackColor = true;
+            // 
+            // btnAjustarVentas_frmVentas
+            // 
+            this.btnAjustarVentas_frmVentas.Location = new System.Drawing.Point(309, 195);
+            this.btnAjustarVentas_frmVentas.Name = "btnAjustarVentas_frmVentas";
+            this.btnAjustarVentas_frmVentas.Size = new System.Drawing.Size(114, 23);
+            this.btnAjustarVentas_frmVentas.TabIndex = 15;
+            this.btnAjustarVentas_frmVentas.Text = "Ajustar Venta";
+            this.btnAjustarVentas_frmVentas.UseVisualStyleBackColor = true;
+            // 
+            // btnVerDetalle_frmVentas
+            // 
+            this.btnVerDetalle_frmVentas.Location = new System.Drawing.Point(309, 266);
+            this.btnVerDetalle_frmVentas.Name = "btnVerDetalle_frmVentas";
+            this.btnVerDetalle_frmVentas.Size = new System.Drawing.Size(114, 23);
+            this.btnVerDetalle_frmVentas.TabIndex = 16;
+            this.btnVerDetalle_frmVentas.Text = "Ver detalle";
+            this.btnVerDetalle_frmVentas.UseVisualStyleBackColor = true;
+            // 
             // frmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(435, 150);
+            this.ClientSize = new System.Drawing.Size(435, 384);
+            this.Controls.Add(this.btnVerDetalle_frmVentas);
+            this.Controls.Add(this.btnAjustarVentas_frmVentas);
+            this.Controls.Add(this.btnEliminarVentas_frmVentas);
+            this.Controls.Add(this.btnIngresarVenta_frmVentas);
             this.Controls.Add(this.dtpFechaVenta_frmVentas);
             this.Controls.Add(this.btnSalir_frmVentas);
             this.Controls.Add(this.btnLimpiar_frmVentas);
@@ -198,5 +242,9 @@
         private System.Windows.Forms.Button btnLimpiar_frmVentas;
         private System.Windows.Forms.Button btnSalir_frmVentas;
         private System.Windows.Forms.DateTimePicker dtpFechaVenta_frmVentas;
+        private System.Windows.Forms.Button btnIngresarVenta_frmVentas;
+        private System.Windows.Forms.Button btnEliminarVentas_frmVentas;
+        private System.Windows.Forms.Button btnAjustarVentas_frmVentas;
+        private System.Windows.Forms.Button btnVerDetalle_frmVentas;
     }
 }

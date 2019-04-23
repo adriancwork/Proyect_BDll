@@ -41,6 +41,9 @@
             this.btnBorrar_frmMueblerias = new System.Windows.Forms.Button();
             this.btnLimpiar_frmMueblerias = new System.Windows.Forms.Button();
             this.btnSalir_frmMueblerias = new System.Windows.Forms.Button();
+            this.btnAgregarMueble_frmMueblerias = new System.Windows.Forms.Button();
+            this.btnEliminarMueble_frmMuebleria = new System.Windows.Forms.Button();
+            this.btnAjustes_frmMueblerias = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblID_frmMueblerias
@@ -149,7 +152,7 @@
             // 
             // btnSalir_frmMueblerias
             // 
-            this.btnSalir_frmMueblerias.Location = new System.Drawing.Point(311, 116);
+            this.btnSalir_frmMueblerias.Location = new System.Drawing.Point(311, 329);
             this.btnSalir_frmMueblerias.Name = "btnSalir_frmMueblerias";
             this.btnSalir_frmMueblerias.Size = new System.Drawing.Size(117, 23);
             this.btnSalir_frmMueblerias.TabIndex = 12;
@@ -157,11 +160,41 @@
             this.btnSalir_frmMueblerias.UseVisualStyleBackColor = true;
             this.btnSalir_frmMueblerias.Click += new System.EventHandler(this.btnSalir_frmMueblerias_Click);
             // 
+            // btnAgregarMueble_frmMueblerias
+            // 
+            this.btnAgregarMueble_frmMueblerias.Location = new System.Drawing.Point(311, 156);
+            this.btnAgregarMueble_frmMueblerias.Name = "btnAgregarMueble_frmMueblerias";
+            this.btnAgregarMueble_frmMueblerias.Size = new System.Drawing.Size(117, 23);
+            this.btnAgregarMueble_frmMueblerias.TabIndex = 13;
+            this.btnAgregarMueble_frmMueblerias.Text = "Agregar Mueble";
+            this.btnAgregarMueble_frmMueblerias.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminarMueble_frmMuebleria
+            // 
+            this.btnEliminarMueble_frmMuebleria.Location = new System.Drawing.Point(311, 185);
+            this.btnEliminarMueble_frmMuebleria.Name = "btnEliminarMueble_frmMuebleria";
+            this.btnEliminarMueble_frmMuebleria.Size = new System.Drawing.Size(117, 23);
+            this.btnEliminarMueble_frmMuebleria.TabIndex = 14;
+            this.btnEliminarMueble_frmMuebleria.Text = "Eliminar Mueble";
+            this.btnEliminarMueble_frmMuebleria.UseVisualStyleBackColor = true;
+            // 
+            // btnAjustes_frmMueblerias
+            // 
+            this.btnAjustes_frmMueblerias.Location = new System.Drawing.Point(311, 214);
+            this.btnAjustes_frmMueblerias.Name = "btnAjustes_frmMueblerias";
+            this.btnAjustes_frmMueblerias.Size = new System.Drawing.Size(117, 23);
+            this.btnAjustes_frmMueblerias.TabIndex = 15;
+            this.btnAjustes_frmMueblerias.Text = "Ajustes";
+            this.btnAjustes_frmMueblerias.UseVisualStyleBackColor = true;
+            // 
             // frmMueblerias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(440, 151);
+            this.ClientSize = new System.Drawing.Size(440, 364);
+            this.Controls.Add(this.btnAjustes_frmMueblerias);
+            this.Controls.Add(this.btnEliminarMueble_frmMuebleria);
+            this.Controls.Add(this.btnAgregarMueble_frmMueblerias);
             this.Controls.Add(this.btnSalir_frmMueblerias);
             this.Controls.Add(this.btnLimpiar_frmMueblerias);
             this.Controls.Add(this.btnBorrar_frmMueblerias);
@@ -201,5 +234,8 @@
         private System.Windows.Forms.Button btnBorrar_frmMueblerias;
         private System.Windows.Forms.Button btnLimpiar_frmMueblerias;
         private System.Windows.Forms.Button btnSalir_frmMueblerias;
+        private System.Windows.Forms.Button btnAgregarMueble_frmMueblerias;
+        private System.Windows.Forms.Button btnEliminarMueble_frmMuebleria;
+        private System.Windows.Forms.Button btnAjustes_frmMueblerias;
     }
 }
