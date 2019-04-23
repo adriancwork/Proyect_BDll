@@ -44,6 +44,7 @@
             this.btnAgregarMueble_frmMueblerias = new System.Windows.Forms.Button();
             this.btnEliminarMueble_frmMuebleria = new System.Windows.Forms.Button();
             this.btnAjustes_frmMueblerias = new System.Windows.Forms.Button();
+            this.btnDetalle_frmMueblerias = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblID_frmMueblerias
@@ -112,7 +113,7 @@
             // 
             // btnInsertar_Actualizar_frmMueblerias
             // 
-            this.btnInsertar_Actualizar_frmMueblerias.Location = new System.Drawing.Point(311, 9);
+            this.btnInsertar_Actualizar_frmMueblerias.Location = new System.Drawing.Point(306, 10);
             this.btnInsertar_Actualizar_frmMueblerias.Name = "btnInsertar_Actualizar_frmMueblerias";
             this.btnInsertar_Actualizar_frmMueblerias.Size = new System.Drawing.Size(117, 23);
             this.btnInsertar_Actualizar_frmMueblerias.TabIndex = 8;
@@ -122,7 +123,7 @@
             // 
             // btnConsultar_frmMueblerias
             // 
-            this.btnConsultar_frmMueblerias.Location = new System.Drawing.Point(311, 35);
+            this.btnConsultar_frmMueblerias.Location = new System.Drawing.Point(306, 36);
             this.btnConsultar_frmMueblerias.Name = "btnConsultar_frmMueblerias";
             this.btnConsultar_frmMueblerias.Size = new System.Drawing.Size(117, 23);
             this.btnConsultar_frmMueblerias.TabIndex = 9;
@@ -132,7 +133,7 @@
             // 
             // btnBorrar_frmMueblerias
             // 
-            this.btnBorrar_frmMueblerias.Location = new System.Drawing.Point(311, 61);
+            this.btnBorrar_frmMueblerias.Location = new System.Drawing.Point(306, 62);
             this.btnBorrar_frmMueblerias.Name = "btnBorrar_frmMueblerias";
             this.btnBorrar_frmMueblerias.Size = new System.Drawing.Size(117, 23);
             this.btnBorrar_frmMueblerias.TabIndex = 10;
@@ -142,7 +143,7 @@
             // 
             // btnLimpiar_frmMueblerias
             // 
-            this.btnLimpiar_frmMueblerias.Location = new System.Drawing.Point(311, 87);
+            this.btnLimpiar_frmMueblerias.Location = new System.Drawing.Point(306, 88);
             this.btnLimpiar_frmMueblerias.Name = "btnLimpiar_frmMueblerias";
             this.btnLimpiar_frmMueblerias.Size = new System.Drawing.Size(117, 23);
             this.btnLimpiar_frmMueblerias.TabIndex = 11;
@@ -152,7 +153,7 @@
             // 
             // btnSalir_frmMueblerias
             // 
-            this.btnSalir_frmMueblerias.Location = new System.Drawing.Point(311, 329);
+            this.btnSalir_frmMueblerias.Location = new System.Drawing.Point(306, 349);
             this.btnSalir_frmMueblerias.Name = "btnSalir_frmMueblerias";
             this.btnSalir_frmMueblerias.Size = new System.Drawing.Size(117, 23);
             this.btnSalir_frmMueblerias.TabIndex = 12;
@@ -162,7 +163,7 @@
             // 
             // btnAgregarMueble_frmMueblerias
             // 
-            this.btnAgregarMueble_frmMueblerias.Location = new System.Drawing.Point(311, 156);
+            this.btnAgregarMueble_frmMueblerias.Location = new System.Drawing.Point(306, 149);
             this.btnAgregarMueble_frmMueblerias.Name = "btnAgregarMueble_frmMueblerias";
             this.btnAgregarMueble_frmMueblerias.Size = new System.Drawing.Size(117, 23);
             this.btnAgregarMueble_frmMueblerias.TabIndex = 13;
@@ -171,7 +172,7 @@
             // 
             // btnEliminarMueble_frmMuebleria
             // 
-            this.btnEliminarMueble_frmMuebleria.Location = new System.Drawing.Point(311, 185);
+            this.btnEliminarMueble_frmMuebleria.Location = new System.Drawing.Point(306, 178);
             this.btnEliminarMueble_frmMuebleria.Name = "btnEliminarMueble_frmMuebleria";
             this.btnEliminarMueble_frmMuebleria.Size = new System.Drawing.Size(117, 23);
             this.btnEliminarMueble_frmMuebleria.TabIndex = 14;
@@ -180,18 +181,28 @@
             // 
             // btnAjustes_frmMueblerias
             // 
-            this.btnAjustes_frmMueblerias.Location = new System.Drawing.Point(311, 214);
+            this.btnAjustes_frmMueblerias.Location = new System.Drawing.Point(306, 207);
             this.btnAjustes_frmMueblerias.Name = "btnAjustes_frmMueblerias";
             this.btnAjustes_frmMueblerias.Size = new System.Drawing.Size(117, 23);
             this.btnAjustes_frmMueblerias.TabIndex = 15;
             this.btnAjustes_frmMueblerias.Text = "Ajustes";
             this.btnAjustes_frmMueblerias.UseVisualStyleBackColor = true;
             // 
+            // btnDetalle_frmMueblerias
+            // 
+            this.btnDetalle_frmMueblerias.Location = new System.Drawing.Point(306, 279);
+            this.btnDetalle_frmMueblerias.Name = "btnDetalle_frmMueblerias";
+            this.btnDetalle_frmMueblerias.Size = new System.Drawing.Size(117, 23);
+            this.btnDetalle_frmMueblerias.TabIndex = 16;
+            this.btnDetalle_frmMueblerias.Text = "Detalle";
+            this.btnDetalle_frmMueblerias.UseVisualStyleBackColor = true;
+            // 
             // frmMueblerias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(440, 364);
+            this.ClientSize = new System.Drawing.Size(435, 384);
+            this.Controls.Add(this.btnDetalle_frmMueblerias);
             this.Controls.Add(this.btnAjustes_frmMueblerias);
             this.Controls.Add(this.btnEliminarMueble_frmMuebleria);
             this.Controls.Add(this.btnAgregarMueble_frmMueblerias);
@@ -237,5 +248,6 @@
         private System.Windows.Forms.Button btnAgregarMueble_frmMueblerias;
         private System.Windows.Forms.Button btnEliminarMueble_frmMuebleria;
         private System.Windows.Forms.Button btnAjustes_frmMueblerias;
+        private System.Windows.Forms.Button btnDetalle_frmMueblerias;
     }
 }

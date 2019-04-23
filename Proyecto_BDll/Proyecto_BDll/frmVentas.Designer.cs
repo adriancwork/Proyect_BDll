@@ -220,6 +220,7 @@
             this.Controls.Add(this.lblMuebleria_frmVentas);
             this.Controls.Add(this.lblID_frmVentas);
             this.Name = "frmVentas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmVentas";
             this.Load += new System.EventHandler(this.frmVentas_Load);
             this.ResumeLayout(false);

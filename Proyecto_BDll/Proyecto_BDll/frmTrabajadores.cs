@@ -199,5 +199,10 @@ namespace Proyecto_BDll
             this.Close();
         }
 
+        //Comando para que cuando se seleccione la opcion de la lista aparezca en la txtbxPuesto
+        private void lstbxPuesto_frmTrabajadores_DoubleClick(object sender, EventArgs e)
+        {
+            //Buscar como aggarrar los datos de la lstbx y que se pongan en la txtbx
+        }
     }
 }

@@ -153,10 +153,18 @@
             // lstbxPuesto_frmTrabajadores
             // 
             this.lstbxPuesto_frmTrabajadores.FormattingEnabled = true;
+            this.lstbxPuesto_frmTrabajadores.Items.AddRange(new object[] {
+            "Asistente",
+            "Co-Jefe",
+            "Jefe",
+            "Encargado",
+            "Mandatario",
+            "Operador"});
             this.lstbxPuesto_frmTrabajadores.Location = new System.Drawing.Point(205, 70);
             this.lstbxPuesto_frmTrabajadores.Name = "lstbxPuesto_frmTrabajadores";
             this.lstbxPuesto_frmTrabajadores.Size = new System.Drawing.Size(120, 43);
             this.lstbxPuesto_frmTrabajadores.TabIndex = 111;
+            this.lstbxPuesto_frmTrabajadores.DoubleClick += new System.EventHandler(this.lstbxPuesto_frmTrabajadores_DoubleClick);
             // 
             // lblID_frmTrabajadores
             // 
