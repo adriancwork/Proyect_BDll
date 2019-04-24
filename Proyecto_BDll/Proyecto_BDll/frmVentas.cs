@@ -267,8 +267,46 @@ namespace Proyecto_BDll
             consultar_sqldatareader.Close();
 
             }
+
+        //Boton de Ingrear/Actualizar
+        private void btnIngresar_ActualizarVenta_frmVentas_Click(object sender, EventArgs e)
+        {
+            frmVentas_Ingresar_Actualizar frmVentas_Ingresar_Actualizar = new frmVentas_Ingresar_Actualizar(Ventas_sqlcnn);
+            frmVentas_Ingresar_Actualizar.FormClosed += new FormClosedEventHandler(frmVentas_Ingresar_Actualizar_FormClosed);
+            frmVentas_Ingresar_Actualizar.Show();
+            this.Hide();
         }
-    }   
+
+        private void frmVentas_Ingresar_Actualizar_FormClosed(object sender, FormClosedEventArgs e) {
+            this.Show();
+        }
+
+        //Boton de Eliminar
+        private void btnEliminarVentas_frmVentas_Click(object sender, EventArgs e)
+        {
+            frmVentas_Eliminar frmVentas_Eliminar = new frmVentas_Eliminar(Ventas_sqlcnn);
+            frmVentas_Eliminar.FormClosed += new FormClosedEventHandler(frmVentas_Eliminar_FormClosed);
+            frmVentas_Eliminar.Show();
+            this.Hide();
+        }
+
+        private void frmVentas_Eliminar_FormClosed(object sender, EventArgs e) {
+            this.Show();
+        }
+
+        //Boton de VerDetalle
+        private void btnVerDetalle_frmVentas_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //Boton de Limpiar
+        private void btnLimpiarDataViewVentas_frmVentas_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}   
 
     
  

@@ -288,5 +288,43 @@ namespace Proyecto_BDll
             }
             txtbxProveedorNombre_sqldatareader.Close();
         }
+
+        //Boton de Agregar/Actualizar
+        private void btnAgregar_ActualizarMueble_frmMueblerias_Click(object sender, EventArgs e)
+        {
+            frmMueblerias_Agregar_Actualizar frmMueblerias_Agregar_Actualizar = new frmMueblerias_Agregar_Actualizar(Muebleria_sqlcnn);
+            frmMueblerias_Agregar_Actualizar.FormClosed += new FormClosedEventHandler(frmMueblerias_Agregar_Actualizar_FormedClosed);
+            frmMueblerias_Agregar_Actualizar.Show();
+            this.Hide();
+        }
+
+        private void frmMueblerias_Agregar_Actualizar_FormedClosed(object sender, EventArgs e) {
+            this.Show();
+        }
+
+        //Boton de Eliminar
+        private void btnEliminarMueble_frmMuebleria_Click(object sender, EventArgs e)
+        {
+            frmMueblerias_Eliminar frmMueblerias_Eliminar = new frmMueblerias_Eliminar(Muebleria_sqlcnn);
+            frmMueblerias_Eliminar.FormClosed += new FormClosedEventHandler(frmMueblerias_Eliminar_FormedClosed);
+            frmMueblerias_Eliminar.Show();
+            this.Hide();
+        }
+
+        private void frmMueblerias_Eliminar_FormedClosed(object sender, EventArgs e) {
+            this.Show();
+        }
+
+        //Boton de Detalle
+        private void btnDetalle_frmMueblerias_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //Boton Limpiar
+        private void btnLimpiarDataView_frmMueblerias_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

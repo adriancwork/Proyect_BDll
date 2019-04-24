@@ -58,6 +58,18 @@
     <Compile Include="frmMueblerias.Designer.cs">
       <DependentUpon>frmMueblerias.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMueblerias_Agregar_Actualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMueblerias_Agregar_Actualizar.Designer.cs">
+      <DependentUpon>frmMueblerias_Agregar_Actualizar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmMueblerias_Eliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMueblerias_Eliminar.Designer.cs">
+      <DependentUpon>frmMueblerias_Eliminar.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmProveedores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +88,18 @@
     <Compile Include="frmVentas.Designer.cs">
       <DependentUpon>frmVentas.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVentas_Eliminar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVentas_Eliminar.Designer.cs">
+      <DependentUpon>frmVentas_Eliminar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVentas_Ingresar_Actualizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVentas_Ingresar_Actualizar.Designer.cs">
+      <DependentUpon>frmVentas_Ingresar_Actualizar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmMenu.resx">
@@ -83,6 +107,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMueblerias.resx">
       <DependentUpon>frmMueblerias.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMueblerias_Agregar_Actualizar.resx">
+      <DependentUpon>frmMueblerias_Agregar_Actualizar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMueblerias_Eliminar.resx">
+      <DependentUpon>frmMueblerias_Eliminar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmProveedores.resx">
       <DependentUpon>frmProveedores.cs</DependentUpon>
@@ -92,6 +122,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmVentas.resx">
       <DependentUpon>frmVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVentas_Eliminar.resx">
+      <DependentUpon>frmVentas_Eliminar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVentas_Ingresar_Actualizar.resx">
+      <DependentUpon>frmVentas_Ingresar_Actualizar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

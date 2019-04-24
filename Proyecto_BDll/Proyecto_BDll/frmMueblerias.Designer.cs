@@ -172,6 +172,7 @@
             this.btnAgregar_ActualizarMueble_frmMueblerias.TabIndex = 13;
             this.btnAgregar_ActualizarMueble_frmMueblerias.Text = "Agregar/Actualizar Mueble";
             this.btnAgregar_ActualizarMueble_frmMueblerias.UseVisualStyleBackColor = true;
+            this.btnAgregar_ActualizarMueble_frmMueblerias.Click += new System.EventHandler(this.btnAgregar_ActualizarMueble_frmMueblerias_Click);
             // 
             // btnEliminarMueble_frmMuebleria
             // 
@@ -181,6 +182,7 @@
             this.btnEliminarMueble_frmMuebleria.TabIndex = 14;
             this.btnEliminarMueble_frmMuebleria.Text = "Eliminar Mueble";
             this.btnEliminarMueble_frmMuebleria.UseVisualStyleBackColor = true;
+            this.btnEliminarMueble_frmMuebleria.Click += new System.EventHandler(this.btnEliminarMueble_frmMuebleria_Click);
             // 
             // btnLimpiarDataView_frmMueblerias
             // 
@@ -190,6 +192,7 @@
             this.btnLimpiarDataView_frmMueblerias.TabIndex = 15;
             this.btnLimpiarDataView_frmMueblerias.Text = "Limpiar";
             this.btnLimpiarDataView_frmMueblerias.UseVisualStyleBackColor = true;
+            this.btnLimpiarDataView_frmMueblerias.Click += new System.EventHandler(this.btnLimpiarDataView_frmMueblerias_Click);
             // 
             // btnDetalle_frmMueblerias
             // 
@@ -199,6 +202,7 @@
             this.btnDetalle_frmMueblerias.TabIndex = 16;
             this.btnDetalle_frmMueblerias.Text = "Detalle";
             this.btnDetalle_frmMueblerias.UseVisualStyleBackColor = true;
+            this.btnDetalle_frmMueblerias.Click += new System.EventHandler(this.btnDetalle_frmMueblerias_Click);
             // 
             // dataGridView1
             // 

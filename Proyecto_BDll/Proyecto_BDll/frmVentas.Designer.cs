@@ -41,9 +41,9 @@
             this.btnLimpiar_frmVentas = new System.Windows.Forms.Button();
             this.btnSalir_frmVentas = new System.Windows.Forms.Button();
             this.dtpFechaVenta_frmVentas = new System.Windows.Forms.DateTimePicker();
-            this.btnIngresarVenta_frmVentas = new System.Windows.Forms.Button();
+            this.btnIngresar_ActualizarVenta_frmVentas = new System.Windows.Forms.Button();
             this.btnEliminarVentas_frmVentas = new System.Windows.Forms.Button();
-            this.btnAjustarVentas_frmVentas = new System.Windows.Forms.Button();
+            this.btnLimpiarDataViewVentas_frmVentas = new System.Windows.Forms.Button();
             this.btnVerDetalle_frmVentas = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.txtbxNombreTrabajador_frmVentas = new System.Windows.Forms.TextBox();
@@ -165,41 +165,45 @@
             this.dtpFechaVenta_frmVentas.Size = new System.Drawing.Size(203, 20);
             this.dtpFechaVenta_frmVentas.TabIndex = 7;
             // 
-            // btnIngresarVenta_frmVentas
+            // btnIngresar_ActualizarVenta_frmVentas
             // 
-            this.btnIngresarVenta_frmVentas.Location = new System.Drawing.Point(309, 138);
-            this.btnIngresarVenta_frmVentas.Name = "btnIngresarVenta_frmVentas";
-            this.btnIngresarVenta_frmVentas.Size = new System.Drawing.Size(114, 23);
-            this.btnIngresarVenta_frmVentas.TabIndex = 13;
-            this.btnIngresarVenta_frmVentas.Text = "Ingresar Venta";
-            this.btnIngresarVenta_frmVentas.UseVisualStyleBackColor = true;
+            this.btnIngresar_ActualizarVenta_frmVentas.Location = new System.Drawing.Point(309, 138);
+            this.btnIngresar_ActualizarVenta_frmVentas.Name = "btnIngresar_ActualizarVenta_frmVentas";
+            this.btnIngresar_ActualizarVenta_frmVentas.Size = new System.Drawing.Size(114, 35);
+            this.btnIngresar_ActualizarVenta_frmVentas.TabIndex = 13;
+            this.btnIngresar_ActualizarVenta_frmVentas.Text = "Ingresar/Actualizar Venta";
+            this.btnIngresar_ActualizarVenta_frmVentas.UseVisualStyleBackColor = true;
+            this.btnIngresar_ActualizarVenta_frmVentas.Click += new System.EventHandler(this.btnIngresar_ActualizarVenta_frmVentas_Click);
             // 
             // btnEliminarVentas_frmVentas
             // 
-            this.btnEliminarVentas_frmVentas.Location = new System.Drawing.Point(309, 167);
+            this.btnEliminarVentas_frmVentas.Location = new System.Drawing.Point(309, 179);
             this.btnEliminarVentas_frmVentas.Name = "btnEliminarVentas_frmVentas";
             this.btnEliminarVentas_frmVentas.Size = new System.Drawing.Size(114, 22);
             this.btnEliminarVentas_frmVentas.TabIndex = 14;
             this.btnEliminarVentas_frmVentas.Text = "Eliminar Venta";
             this.btnEliminarVentas_frmVentas.UseVisualStyleBackColor = true;
+            this.btnEliminarVentas_frmVentas.Click += new System.EventHandler(this.btnEliminarVentas_frmVentas_Click);
             // 
-            // btnAjustarVentas_frmVentas
+            // btnLimpiarDataViewVentas_frmVentas
             // 
-            this.btnAjustarVentas_frmVentas.Location = new System.Drawing.Point(309, 195);
-            this.btnAjustarVentas_frmVentas.Name = "btnAjustarVentas_frmVentas";
-            this.btnAjustarVentas_frmVentas.Size = new System.Drawing.Size(114, 23);
-            this.btnAjustarVentas_frmVentas.TabIndex = 15;
-            this.btnAjustarVentas_frmVentas.Text = "Ajustar Venta";
-            this.btnAjustarVentas_frmVentas.UseVisualStyleBackColor = true;
+            this.btnLimpiarDataViewVentas_frmVentas.Location = new System.Drawing.Point(309, 234);
+            this.btnLimpiarDataViewVentas_frmVentas.Name = "btnLimpiarDataViewVentas_frmVentas";
+            this.btnLimpiarDataViewVentas_frmVentas.Size = new System.Drawing.Size(114, 23);
+            this.btnLimpiarDataViewVentas_frmVentas.TabIndex = 15;
+            this.btnLimpiarDataViewVentas_frmVentas.Text = "Limpiar";
+            this.btnLimpiarDataViewVentas_frmVentas.UseVisualStyleBackColor = true;
+            this.btnLimpiarDataViewVentas_frmVentas.Click += new System.EventHandler(this.btnLimpiarDataViewVentas_frmVentas_Click);
             // 
             // btnVerDetalle_frmVentas
             // 
-            this.btnVerDetalle_frmVentas.Location = new System.Drawing.Point(309, 266);
+            this.btnVerDetalle_frmVentas.Location = new System.Drawing.Point(309, 207);
             this.btnVerDetalle_frmVentas.Name = "btnVerDetalle_frmVentas";
             this.btnVerDetalle_frmVentas.Size = new System.Drawing.Size(114, 23);
             this.btnVerDetalle_frmVentas.TabIndex = 16;
             this.btnVerDetalle_frmVentas.Text = "Ver detalle";
             this.btnVerDetalle_frmVentas.UseVisualStyleBackColor = true;
+            this.btnVerDetalle_frmVentas.Click += new System.EventHandler(this.btnVerDetalle_frmVentas_Click);
             // 
             // dataGridView1
             // 
@@ -224,9 +228,9 @@
             this.Controls.Add(this.txtbxNombreTrabajador_frmVentas);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnVerDetalle_frmVentas);
-            this.Controls.Add(this.btnAjustarVentas_frmVentas);
+            this.Controls.Add(this.btnLimpiarDataViewVentas_frmVentas);
             this.Controls.Add(this.btnEliminarVentas_frmVentas);
-            this.Controls.Add(this.btnIngresarVenta_frmVentas);
+            this.Controls.Add(this.btnIngresar_ActualizarVenta_frmVentas);
             this.Controls.Add(this.dtpFechaVenta_frmVentas);
             this.Controls.Add(this.btnSalir_frmVentas);
             this.Controls.Add(this.btnLimpiar_frmVentas);
@@ -265,9 +269,9 @@
         private System.Windows.Forms.Button btnLimpiar_frmVentas;
         private System.Windows.Forms.Button btnSalir_frmVentas;
         private System.Windows.Forms.DateTimePicker dtpFechaVenta_frmVentas;
-        private System.Windows.Forms.Button btnIngresarVenta_frmVentas;
+        private System.Windows.Forms.Button btnIngresar_ActualizarVenta_frmVentas;
         private System.Windows.Forms.Button btnEliminarVentas_frmVentas;
-        private System.Windows.Forms.Button btnAjustarVentas_frmVentas;
+        private System.Windows.Forms.Button btnLimpiarDataViewVentas_frmVentas;
         private System.Windows.Forms.Button btnVerDetalle_frmVentas;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.TextBox txtbxNombreTrabajador_frmVentas;
