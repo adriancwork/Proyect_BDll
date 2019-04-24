@@ -45,6 +45,9 @@
             this.btnEliminarVentas_frmVentas = new System.Windows.Forms.Button();
             this.btnAjustarVentas_frmVentas = new System.Windows.Forms.Button();
             this.btnVerDetalle_frmVentas = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtbxNombreTrabajador_frmVentas = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblID_frmVentas
@@ -87,22 +90,23 @@
             // 
             this.txtbxID_frmVentas.Location = new System.Drawing.Point(80, 12);
             this.txtbxID_frmVentas.Name = "txtbxID_frmVentas";
-            this.txtbxID_frmVentas.Size = new System.Drawing.Size(92, 20);
+            this.txtbxID_frmVentas.Size = new System.Drawing.Size(76, 20);
             this.txtbxID_frmVentas.TabIndex = 4;
             // 
             // txtbxMuebleria_frmVentas
             // 
             this.txtbxMuebleria_frmVentas.Location = new System.Drawing.Point(80, 38);
             this.txtbxMuebleria_frmVentas.Name = "txtbxMuebleria_frmVentas";
-            this.txtbxMuebleria_frmVentas.Size = new System.Drawing.Size(92, 20);
+            this.txtbxMuebleria_frmVentas.Size = new System.Drawing.Size(76, 20);
             this.txtbxMuebleria_frmVentas.TabIndex = 5;
             // 
             // txtbxTrabajador_frmVentas
             // 
             this.txtbxTrabajador_frmVentas.Location = new System.Drawing.Point(80, 64);
             this.txtbxTrabajador_frmVentas.Name = "txtbxTrabajador_frmVentas";
-            this.txtbxTrabajador_frmVentas.Size = new System.Drawing.Size(92, 20);
+            this.txtbxTrabajador_frmVentas.Size = new System.Drawing.Size(76, 20);
             this.txtbxTrabajador_frmVentas.TabIndex = 6;
+            this.txtbxTrabajador_frmVentas.TextChanged += new System.EventHandler(this.txtbxTrabajador_frmVentas_TextChanged);
             // 
             // btnInsertar_Actualizar_frmVentas
             // 
@@ -197,11 +201,28 @@
             this.btnVerDetalle_frmVentas.Text = "Ver detalle";
             this.btnVerDetalle_frmVentas.UseVisualStyleBackColor = true;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(15, 138);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(288, 234);
+            this.dataGridView1.TabIndex = 17;
+            // 
+            // txtbxNombreTrabajador_frmVentas
+            // 
+            this.txtbxNombreTrabajador_frmVentas.Location = new System.Drawing.Point(162, 66);
+            this.txtbxNombreTrabajador_frmVentas.Name = "txtbxNombreTrabajador_frmVentas";
+            this.txtbxNombreTrabajador_frmVentas.Size = new System.Drawing.Size(141, 20);
+            this.txtbxNombreTrabajador_frmVentas.TabIndex = 18;
+            // 
             // frmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(435, 384);
+            this.Controls.Add(this.txtbxNombreTrabajador_frmVentas);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnVerDetalle_frmVentas);
             this.Controls.Add(this.btnAjustarVentas_frmVentas);
             this.Controls.Add(this.btnEliminarVentas_frmVentas);
@@ -223,6 +244,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmVentas";
             this.Load += new System.EventHandler(this.frmVentas_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -247,5 +269,7 @@
         private System.Windows.Forms.Button btnEliminarVentas_frmVentas;
         private System.Windows.Forms.Button btnAjustarVentas_frmVentas;
         private System.Windows.Forms.Button btnVerDetalle_frmVentas;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtbxNombreTrabajador_frmVentas;
     }
 }

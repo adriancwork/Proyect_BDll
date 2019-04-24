@@ -164,7 +164,7 @@
             this.lstbxPuesto_frmTrabajadores.Name = "lstbxPuesto_frmTrabajadores";
             this.lstbxPuesto_frmTrabajadores.Size = new System.Drawing.Size(120, 43);
             this.lstbxPuesto_frmTrabajadores.TabIndex = 111;
-            this.lstbxPuesto_frmTrabajadores.DoubleClick += new System.EventHandler(this.lstbxPuesto_frmTrabajadores_DoubleClick);
+            this.lstbxPuesto_frmTrabajadores.SelectedIndexChanged += new System.EventHandler(this.lstbxPuesto_frmTrabajadores_SelectedIndexChanged);
             // 
             // lblID_frmTrabajadores
             // 

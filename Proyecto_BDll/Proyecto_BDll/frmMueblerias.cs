@@ -28,7 +28,40 @@ namespace Proyecto_BDll
 
         private void frmMueblerias_Load(object sender, EventArgs e)
         {
+            //Aqui cargar la lista de los proveedores disponibles de la base de datos
+            SqlDataReader cmbbxIDProveedor_sqldatareader;
+            SqlCommand cmbbxIDProveedor_sqlcommand = new SqlCommand();
 
+            cmbbxIDProveedor_sqlcommand.CommandText = "SELECT ID_Proveedor_Carpinteria FROM Proveedor ";
+            cmbbxIDProveedor_sqlcommand.CommandType = CommandType.Text;
+            cmbbxIDProveedor_sqlcommand.Connection = Muebleria_sqlcnn;
+
+            cmbbxIDProveedor_sqldatareader = cmbbxIDProveedor_sqlcommand.ExecuteReader();
+
+
+            if (cmbbxIDProveedor_sqldatareader.HasRows)
+            {
+                SqlCommand consultarIDProveedor_sqlCommand = new SqlCommand(cmbbxIDProveedor_sqlcommand.CommandText, Muebleria_sqlcnn);
+
+                try
+                {
+
+                    while (cmbbxIDProveedor_sqldatareader.Read())
+                    {
+                        int i = 0;
+                        String Id = Convert.ToString(cmbbxIDProveedor_sqldatareader.GetInt32(i));
+                        cmbbxIDProveedor_frmMueblerias.Items.Add(Id);
+                        i++;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                    //MessageBox.Show("Existe un error!, porfavor revisar los datos");
+                }
+            }
+            cmbbxIDProveedor_sqldatareader.Close();
+        
         }
 
         //Boton de Insertar/Actualizar
@@ -37,7 +70,7 @@ namespace Proyecto_BDll
             String strInsertar, strActualizar;
 
             String Id = txtbxID_frmMueblerias.Text;
-            String Proveedor = txtbxProveedor_frmMueblerias.Text;
+            String Proveedor = cmbbxIDProveedor_frmMueblerias.Text;
             String Direccion = txtbxDireccion_frmMueblerias.Text;
             String Telefono = txtbxTelefono_frmMueblerias.Text;
 
@@ -132,7 +165,7 @@ namespace Proyecto_BDll
                     while (consultar_sqldatareader.Read())
                     {
                         //Inserta los valores en los campos en el frmTrabajadores
-                        txtbxProveedor_frmMueblerias.Text = consultar_sqldatareader["fkID_Proveedor_Carpinteria"].ToString();
+                        cmbbxIDProveedor_frmMueblerias.Text = consultar_sqldatareader["fkID_Proveedor_Carpinteria"].ToString();
                         txtbxDireccion_frmMueblerias.Text = consultar_sqldatareader["Direccion"].ToString();
                         txtbxTelefono_frmMueblerias.Text = consultar_sqldatareader["Telefono"].ToString();
                     }
@@ -202,7 +235,8 @@ namespace Proyecto_BDll
         private void btnLimpiar_frmMueblerias_Click(object sender, EventArgs e)
         {
             txtbxID_frmMueblerias.Text = "";
-            txtbxProveedor_frmMueblerias.Text = "";
+            cmbbxIDProveedor_frmMueblerias.Text = "";
+            txtbxProveedorNombre_frmMueblerias.Text = "";
             txtbxDireccion_frmMueblerias.Text = "";
             txtbxTelefono_frmMueblerias.Text = "";
         }
@@ -211,6 +245,48 @@ namespace Proyecto_BDll
         private void btnSalir_frmMueblerias_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cmbbxIDProveedor_frmMueblerias_TextChanged(object sender, EventArgs e)
+        {
+            //Aqui cargar la lista de los proveedores disponibles de la base de datos
+
+            SqlDataReader txtbxProveedorNombre_sqldatareader;
+            SqlCommand txtbxProveedorNombre_sqlcommand = new SqlCommand();
+
+            txtbxProveedorNombre_sqlcommand.CommandText = "SELECT Nombre FROM Proveedor WHERE ID_Proveedor_Carpinteria = " + cmbbxIDProveedor_frmMueblerias.Text;
+            txtbxProveedorNombre_sqlcommand.CommandType = CommandType.Text;
+            txtbxProveedorNombre_sqlcommand.Connection = Muebleria_sqlcnn;
+
+            if (cmbbxIDProveedor_frmMueblerias.Text.Equals("")){
+                txtbxProveedorNombre_sqlcommand.CommandText = "SELECT Nombre FROM Proveedor";
+            }
+
+            txtbxProveedorNombre_sqldatareader = txtbxProveedorNombre_sqlcommand.ExecuteReader();
+
+
+            if (txtbxProveedorNombre_sqldatareader.HasRows)
+            {
+                SqlCommand consultarMuebleria_sqlCommand = new SqlCommand(txtbxProveedorNombre_sqlcommand.CommandText, Muebleria_sqlcnn);
+
+                try
+                {
+                    
+                    while (txtbxProveedorNombre_sqldatareader.Read())
+                    {
+                        int i = 0;
+                        String Nombre = txtbxProveedorNombre_sqldatareader.GetString(0);
+                        txtbxProveedorNombre_frmMueblerias.Text = Nombre;
+                        i++;
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Existe un error!, porfavor revisar los datos");
+                }
+
+            }
+            txtbxProveedorNombre_sqldatareader.Close();
         }
     }
 }

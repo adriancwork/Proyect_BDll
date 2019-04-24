@@ -207,6 +207,7 @@ namespace Proyecto_BDll
             txtbxID_frmVentas.Text = "";
             txtbxMuebleria_frmVentas.Text = "";
             txtbxTrabajador_frmVentas.Text = "";
+            txtbxNombreTrabajador_frmVentas.Text = "";
             dtpFechaVenta_frmVentas.Value = DateTime.Now;
         }
 
@@ -215,5 +216,59 @@ namespace Proyecto_BDll
         {
             this.Close();
         }
-    }
-}
+
+        //Evento para actualizar el campo de txtbxTrabajadorNombre
+        private void txtbxTrabajador_frmVentas_TextChanged(object sender, EventArgs e)
+        {
+            String Id = txtbxID_frmVentas.Text;
+
+            //Consultado si existe registro con este ID
+            SqlDataReader consultar_sqldatareader;
+            SqlCommand consultar_sqlcommand = new SqlCommand();
+
+            //Comando almacenado ejecutao
+            consultar_sqlcommand.CommandText = "SELECT Nombre_Trabajador FROM Trabajador WHERE ID_Trabajador = " + txtbxTrabajador_frmVentas.Text;
+            consultar_sqlcommand.CommandType = CommandType.Text;
+            consultar_sqlcommand.Connection = Ventas_sqlcnn;
+
+            if (txtbxTrabajador_frmVentas.Text.Equals(""))
+            {
+                consultar_sqlcommand.CommandText = "SELECT Nombre_Trabajador FROM Trabajador";
+            }
+
+            consultar_sqldatareader = consultar_sqlcommand.ExecuteReader();
+
+            //Consultar si tiene filas (registros) el ID
+            if (consultar_sqldatareader.HasRows) //Checa si existen registros con el Id
+            {
+
+                SqlCommand consultarNombreTrabajador_sqlCommand = new SqlCommand(consultar_sqlcommand.CommandText, Ventas_sqlcnn);
+
+                try {
+
+                    while (consultar_sqldatareader.Read())
+                    {
+                        //Inserta los valores en los campos en el frmTrabajadores
+
+                        txtbxNombreTrabajador_frmVentas.Text = consultar_sqldatareader["Nombre_Trabajador"].ToString();
+
+                    }
+
+                } catch (SqlException) {
+
+                    MessageBox.Show("No existe Id para consultar");
+
+                }
+            } else {
+                //Borra todo en los campos de frmTrabajadores
+                btnLimpiar_frmVentas.PerformClick();
+                MessageBox.Show("No existe registro con el id indicado");
+            }
+            consultar_sqldatareader.Close();
+
+            }
+        }
+    }   
+
+    
+ 

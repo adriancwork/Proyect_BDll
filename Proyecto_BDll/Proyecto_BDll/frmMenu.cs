@@ -24,7 +24,7 @@ namespace Proyecto_BDll
         {
             //Cambiar el Data Source [la conexion del equipo requerida]
             string connectionString = null;
-            connectionString = "Data Source = lenovo-pc\\sqlserverexpress; Initial Catalog=Muebleria; Integrated Security = true";
+            connectionString = "Data Source = lenovo-pc\\sqlserverexpress; Initial Catalog=Muebleria; Integrated Security = true; MultipleActiveResultSets=True;";
 
             Menu_sqlcnn = new SqlConnection(connectionString);
 
