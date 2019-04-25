@@ -388,14 +388,5 @@ namespace Proyecto_BDll
         {
             this.Close();
         }
-
-
-
-
-
-
     }
 }   
-
-    
- 
