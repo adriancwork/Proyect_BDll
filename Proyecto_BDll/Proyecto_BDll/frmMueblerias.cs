@@ -319,12 +319,62 @@ namespace Proyecto_BDll
         private void btnDetalle_frmMueblerias_Click(object sender, EventArgs e)
         {
 
+            //Crea los campos de la tabla
+            DataTable dTableMuebles = new DataTable();
+            dTableMuebles.Columns.Add("ID", typeof(int));
+            dTableMuebles.Columns.Add("Proveedor", typeof(int));
+            dTableMuebles.Columns.Add("Mueble", typeof(String));
+            dTableMuebles.Columns.Add("Costo", typeof(decimal));
+
+            dgvMuebles_frmMuebleria.DataSource = dTableMuebles;
+
+            String tblID, tblIDProveedor, tblNombre, tblCosto;
+
+            //Incia el proceso para llenar la tabla
+            String Id = txtbxID_frmMueblerias.Text;
+
+            //Consultado si existe registro con este ID
+            SqlDataReader consultar_sqldatareader;
+            SqlCommand consultar_sqlcommand = new SqlCommand();
+
+            //Comando almacenado ejecutao
+            consultar_sqlcommand.CommandText = "EXECUTE CONSULTAR_MUEBLES_FRMMUEBLERIAS" + Id;
+            consultar_sqlcommand.CommandType = CommandType.Text;
+            consultar_sqlcommand.Connection = Muebleria_sqlcnn;
+
+            try
+            {
+                consultar_sqldatareader = consultar_sqlcommand.ExecuteReader();
+
+                //Consultar si tiene filas (registros) el ID
+                if (consultar_sqldatareader.HasRows) //Checa si existen registros con el Id
+                {
+                    while (consultar_sqldatareader.Read())
+                    {
+                        //Inserta los valores en los campos en el frmTrabajadores
+                        tblID = consultar_sqldatareader["ID_Mueble"].ToString();
+                        tblIDProveedor = consultar_sqldatareader["fkID_Proveedor_Carpinteria"].ToString();
+                        tblNombre = consultar_sqldatareader["Nombre_Mueble"].ToString();
+                        tblCosto = consultar_sqldatareader["Costo_Unidad"].ToString();
+
+                        dTableMuebles.Rows.Add(tblID, tblIDProveedor, tblNombre, tblCosto);
+                    }
+                }
+                else
+                consultar_sqldatareader.Close();
+            }
+            catch (SqlException)
+            {
+                MessageBox.Show("Error no existen datos, Favor de ingresar ID");
+            }
+
+            dgvMuebles_frmMuebleria.DataSource = dTableMuebles;
         }
 
         //Boton Limpiar
         private void btnLimpiarDataView_frmMueblerias_Click(object sender, EventArgs e)
         {
-
+            dgvMuebles_frmMuebleria.DataSource = "";
         }
     }
 }

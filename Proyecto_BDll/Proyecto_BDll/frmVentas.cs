@@ -211,12 +211,6 @@ namespace Proyecto_BDll
             dtpFechaVenta_frmVentas.Value = DateTime.Now;
         }
 
-        //Boton de Salir
-        private void btnSalir_frmVentas_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
         //Evento para actualizar el campo de txtbxTrabajadorNombre
         private void txtbxTrabajador_frmVentas_TextChanged(object sender, EventArgs e)
         {
@@ -271,7 +265,7 @@ namespace Proyecto_BDll
         //Boton de Ingrear/Actualizar
         private void btnIngresar_ActualizarVenta_frmVentas_Click(object sender, EventArgs e)
         {
-            frmVentas_Ingresar_Actualizar frmVentas_Ingresar_Actualizar = new frmVentas_Ingresar_Actualizar(Ventas_sqlcnn);
+            frmVentas_Ingresar_Actualizar frmVentas_Ingresar_Actualizar = new frmVentas_Ingresar_Actualizar(Ventas_sqlcnn, this);
             frmVentas_Ingresar_Actualizar.FormClosed += new FormClosedEventHandler(frmVentas_Ingresar_Actualizar_FormClosed);
             frmVentas_Ingresar_Actualizar.Show();
             this.Hide();
@@ -295,15 +289,70 @@ namespace Proyecto_BDll
         }
 
         //Boton de VerDetalle
-        private void btnVerDetalle_frmVentas_Click(object sender, EventArgs e)
+       /* private void btnVerDetalle_frmVentas_Click(object sender, EventArgs e)
         {
+            //Crea los campos de la tabla
+            DataTable dTableVentas = new DataTable();
+            dTableVentas.Columns.Add("ID", typeof(int));
+            dTableVentas.Columns.Add("Mueble", typeof(int));
+            dTableVentas.Columns.Add("Cantidad", typeof(int));
+            dTableVentas.Columns.Add("Ajuste", typeof(decimal));
 
+            dgvVentas_frmVentas.DataSource = dTableVentas;
+
+            String tblID, tblIDProveedor, tblNombre, tblCosto;
+
+            //Incia el proceso para llenar la tabla
+            String Id = txtbxID_frmVentas.Text;
+
+            //Consultado si existe registro con este ID
+            SqlDataReader consultar_sqldatareader;
+            SqlCommand consultar_sqlcommand = new SqlCommand();
+
+            //Comando almacenado ejecutao
+            consultar_sqlcommand.CommandText = "EXECUTE CONSULTAR_MUEBLES_FRMMUEBLERIAS" + Id;
+            consultar_sqlcommand.CommandType = CommandType.Text;
+            consultar_sqlcommand.Connection = Ventas_sqlcnn;
+
+            try
+            {
+                consultar_sqldatareader = consultar_sqlcommand.ExecuteReader();
+
+                //Consultar si tiene filas (registros) el ID
+                if (consultar_sqldatareader.HasRows) //Checa si existen registros con el Id
+                {
+                    while (consultar_sqldatareader.Read())
+                    {
+                        //Inserta los valores en los campos en el frmTrabajadores
+                        tblID = consultar_sqldatareader["ID_Mueble"].ToString();
+                        tblIDProveedor = consultar_sqldatareader["fkID_Proveedor_Carpinteria"].ToString();
+                        tblNombre = consultar_sqldatareader["Nombre_Mueble"].ToString();
+                        tblCosto = consultar_sqldatareader["Costo_Unidad"].ToString();
+
+                        dTableVentas.Rows.Add(tblID, tblIDProveedor, tblNombre, tblCosto);
+                    }
+                }
+                else
+                consultar_sqldatareader.Close();
+            }
+            catch (SqlException)
+            {
+                MessageBox.Show("Error no existen datos, Favor de ingresar ID");
+            }
+
+            dgvVentas_frmVentas.DataSource = dTableVentas;
         }
-
+        */
         //Boton de Limpiar
         private void btnLimpiarDataViewVentas_frmVentas_Click(object sender, EventArgs e)
         {
 
+        }
+
+        //Boton de Salir
+        private void btnSalir_frmVentas_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }   

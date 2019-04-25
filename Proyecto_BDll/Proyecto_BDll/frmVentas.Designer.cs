@@ -45,9 +45,16 @@
             this.btnEliminarVentas_frmVentas = new System.Windows.Forms.Button();
             this.btnLimpiarDataViewVentas_frmVentas = new System.Windows.Forms.Button();
             this.btnVerDetalle_frmVentas = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvVentas_frmVentas = new System.Windows.Forms.DataGridView();
             this.txtbxNombreTrabajador_frmVentas = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.txtbxSubTotal_frmVentas = new System.Windows.Forms.TextBox();
+            this.lblSubTotal = new System.Windows.Forms.Label();
+            this.btnVender_frmVentas = new System.Windows.Forms.Button();
+            this.lblImpuestos_frmVentas = new System.Windows.Forms.Label();
+            this.lblTotal_frmVentas = new System.Windows.Forms.Label();
+            this.txtbxTotal_frmVentas = new System.Windows.Forms.TextBox();
+            this.txtbxImpuestos_frmVentas = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVentas_frmVentas)).BeginInit();
             this.SuspendLayout();
             // 
             // lblID_frmVentas
@@ -110,9 +117,9 @@
             // 
             // btnInsertar_Actualizar_frmVentas
             // 
-            this.btnInsertar_Actualizar_frmVentas.Location = new System.Drawing.Point(309, 9);
+            this.btnInsertar_Actualizar_frmVentas.Location = new System.Drawing.Point(342, 9);
             this.btnInsertar_Actualizar_frmVentas.Name = "btnInsertar_Actualizar_frmVentas";
-            this.btnInsertar_Actualizar_frmVentas.Size = new System.Drawing.Size(114, 23);
+            this.btnInsertar_Actualizar_frmVentas.Size = new System.Drawing.Size(104, 23);
             this.btnInsertar_Actualizar_frmVentas.TabIndex = 8;
             this.btnInsertar_Actualizar_frmVentas.Text = "Insertar/Actualizar";
             this.btnInsertar_Actualizar_frmVentas.UseVisualStyleBackColor = true;
@@ -120,9 +127,9 @@
             // 
             // btnConsultar_frmVentas
             // 
-            this.btnConsultar_frmVentas.Location = new System.Drawing.Point(309, 35);
+            this.btnConsultar_frmVentas.Location = new System.Drawing.Point(342, 35);
             this.btnConsultar_frmVentas.Name = "btnConsultar_frmVentas";
-            this.btnConsultar_frmVentas.Size = new System.Drawing.Size(114, 23);
+            this.btnConsultar_frmVentas.Size = new System.Drawing.Size(104, 23);
             this.btnConsultar_frmVentas.TabIndex = 9;
             this.btnConsultar_frmVentas.Text = "Consultar";
             this.btnConsultar_frmVentas.UseVisualStyleBackColor = true;
@@ -130,9 +137,9 @@
             // 
             // btnBorrar_frmVentas
             // 
-            this.btnBorrar_frmVentas.Location = new System.Drawing.Point(309, 61);
+            this.btnBorrar_frmVentas.Location = new System.Drawing.Point(342, 61);
             this.btnBorrar_frmVentas.Name = "btnBorrar_frmVentas";
-            this.btnBorrar_frmVentas.Size = new System.Drawing.Size(114, 23);
+            this.btnBorrar_frmVentas.Size = new System.Drawing.Size(104, 23);
             this.btnBorrar_frmVentas.TabIndex = 10;
             this.btnBorrar_frmVentas.Text = "Borrar";
             this.btnBorrar_frmVentas.UseVisualStyleBackColor = true;
@@ -140,9 +147,9 @@
             // 
             // btnLimpiar_frmVentas
             // 
-            this.btnLimpiar_frmVentas.Location = new System.Drawing.Point(309, 87);
+            this.btnLimpiar_frmVentas.Location = new System.Drawing.Point(342, 87);
             this.btnLimpiar_frmVentas.Name = "btnLimpiar_frmVentas";
-            this.btnLimpiar_frmVentas.Size = new System.Drawing.Size(114, 23);
+            this.btnLimpiar_frmVentas.Size = new System.Drawing.Size(104, 23);
             this.btnLimpiar_frmVentas.TabIndex = 11;
             this.btnLimpiar_frmVentas.Text = "Limpiar";
             this.btnLimpiar_frmVentas.UseVisualStyleBackColor = true;
@@ -150,9 +157,9 @@
             // 
             // btnSalir_frmVentas
             // 
-            this.btnSalir_frmVentas.Location = new System.Drawing.Point(309, 349);
+            this.btnSalir_frmVentas.Location = new System.Drawing.Point(359, 348);
             this.btnSalir_frmVentas.Name = "btnSalir_frmVentas";
-            this.btnSalir_frmVentas.Size = new System.Drawing.Size(114, 23);
+            this.btnSalir_frmVentas.Size = new System.Drawing.Size(82, 70);
             this.btnSalir_frmVentas.TabIndex = 12;
             this.btnSalir_frmVentas.Text = "Salir";
             this.btnSalir_frmVentas.UseVisualStyleBackColor = true;
@@ -167,9 +174,9 @@
             // 
             // btnIngresar_ActualizarVenta_frmVentas
             // 
-            this.btnIngresar_ActualizarVenta_frmVentas.Location = new System.Drawing.Point(309, 138);
+            this.btnIngresar_ActualizarVenta_frmVentas.Location = new System.Drawing.Point(12, 116);
             this.btnIngresar_ActualizarVenta_frmVentas.Name = "btnIngresar_ActualizarVenta_frmVentas";
-            this.btnIngresar_ActualizarVenta_frmVentas.Size = new System.Drawing.Size(114, 35);
+            this.btnIngresar_ActualizarVenta_frmVentas.Size = new System.Drawing.Size(104, 35);
             this.btnIngresar_ActualizarVenta_frmVentas.TabIndex = 13;
             this.btnIngresar_ActualizarVenta_frmVentas.Text = "Ingresar/Actualizar Venta";
             this.btnIngresar_ActualizarVenta_frmVentas.UseVisualStyleBackColor = true;
@@ -177,9 +184,9 @@
             // 
             // btnEliminarVentas_frmVentas
             // 
-            this.btnEliminarVentas_frmVentas.Location = new System.Drawing.Point(309, 179);
+            this.btnEliminarVentas_frmVentas.Location = new System.Drawing.Point(122, 116);
             this.btnEliminarVentas_frmVentas.Name = "btnEliminarVentas_frmVentas";
-            this.btnEliminarVentas_frmVentas.Size = new System.Drawing.Size(114, 22);
+            this.btnEliminarVentas_frmVentas.Size = new System.Drawing.Size(104, 35);
             this.btnEliminarVentas_frmVentas.TabIndex = 14;
             this.btnEliminarVentas_frmVentas.Text = "Eliminar Venta";
             this.btnEliminarVentas_frmVentas.UseVisualStyleBackColor = true;
@@ -187,31 +194,30 @@
             // 
             // btnLimpiarDataViewVentas_frmVentas
             // 
-            this.btnLimpiarDataViewVentas_frmVentas.Location = new System.Drawing.Point(309, 234);
+            this.btnLimpiarDataViewVentas_frmVentas.Location = new System.Drawing.Point(342, 116);
             this.btnLimpiarDataViewVentas_frmVentas.Name = "btnLimpiarDataViewVentas_frmVentas";
-            this.btnLimpiarDataViewVentas_frmVentas.Size = new System.Drawing.Size(114, 23);
+            this.btnLimpiarDataViewVentas_frmVentas.Size = new System.Drawing.Size(104, 35);
             this.btnLimpiarDataViewVentas_frmVentas.TabIndex = 15;
-            this.btnLimpiarDataViewVentas_frmVentas.Text = "Limpiar";
+            this.btnLimpiarDataViewVentas_frmVentas.Text = "Limpiar tabla";
             this.btnLimpiarDataViewVentas_frmVentas.UseVisualStyleBackColor = true;
             this.btnLimpiarDataViewVentas_frmVentas.Click += new System.EventHandler(this.btnLimpiarDataViewVentas_frmVentas_Click);
             // 
             // btnVerDetalle_frmVentas
             // 
-            this.btnVerDetalle_frmVentas.Location = new System.Drawing.Point(309, 207);
+            this.btnVerDetalle_frmVentas.Location = new System.Drawing.Point(232, 116);
             this.btnVerDetalle_frmVentas.Name = "btnVerDetalle_frmVentas";
-            this.btnVerDetalle_frmVentas.Size = new System.Drawing.Size(114, 23);
+            this.btnVerDetalle_frmVentas.Size = new System.Drawing.Size(104, 35);
             this.btnVerDetalle_frmVentas.TabIndex = 16;
-            this.btnVerDetalle_frmVentas.Text = "Ver detalle";
+            this.btnVerDetalle_frmVentas.Text = "Detalle";
             this.btnVerDetalle_frmVentas.UseVisualStyleBackColor = true;
-            this.btnVerDetalle_frmVentas.Click += new System.EventHandler(this.btnVerDetalle_frmVentas_Click);
             // 
-            // dataGridView1
+            // dgvVentas_frmVentas
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(15, 138);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(288, 234);
-            this.dataGridView1.TabIndex = 17;
+            this.dgvVentas_frmVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvVentas_frmVentas.Location = new System.Drawing.Point(12, 157);
+            this.dgvVentas_frmVentas.Name = "dgvVentas_frmVentas";
+            this.dgvVentas_frmVentas.Size = new System.Drawing.Size(431, 185);
+            this.dgvVentas_frmVentas.TabIndex = 17;
             // 
             // txtbxNombreTrabajador_frmVentas
             // 
@@ -220,13 +226,77 @@
             this.txtbxNombreTrabajador_frmVentas.Size = new System.Drawing.Size(141, 20);
             this.txtbxNombreTrabajador_frmVentas.TabIndex = 18;
             // 
+            // txtbxSubTotal_frmVentas
+            // 
+            this.txtbxSubTotal_frmVentas.Location = new System.Drawing.Point(86, 345);
+            this.txtbxSubTotal_frmVentas.Name = "txtbxSubTotal_frmVentas";
+            this.txtbxSubTotal_frmVentas.Size = new System.Drawing.Size(104, 20);
+            this.txtbxSubTotal_frmVentas.TabIndex = 19;
+            // 
+            // lblSubTotal
+            // 
+            this.lblSubTotal.AutoSize = true;
+            this.lblSubTotal.Location = new System.Drawing.Point(12, 348);
+            this.lblSubTotal.Name = "lblSubTotal";
+            this.lblSubTotal.Size = new System.Drawing.Size(50, 13);
+            this.lblSubTotal.TabIndex = 20;
+            this.lblSubTotal.Text = "SubTotal";
+            // 
+            // btnVender_frmVentas
+            // 
+            this.btnVender_frmVentas.Location = new System.Drawing.Point(271, 348);
+            this.btnVender_frmVentas.Name = "btnVender_frmVentas";
+            this.btnVender_frmVentas.Size = new System.Drawing.Size(82, 70);
+            this.btnVender_frmVentas.TabIndex = 21;
+            this.btnVender_frmVentas.Text = "Vender";
+            this.btnVender_frmVentas.UseVisualStyleBackColor = true;
+            // 
+            // lblImpuestos_frmVentas
+            // 
+            this.lblImpuestos_frmVentas.AutoSize = true;
+            this.lblImpuestos_frmVentas.Location = new System.Drawing.Point(12, 373);
+            this.lblImpuestos_frmVentas.Name = "lblImpuestos_frmVentas";
+            this.lblImpuestos_frmVentas.Size = new System.Drawing.Size(55, 13);
+            this.lblImpuestos_frmVentas.TabIndex = 22;
+            this.lblImpuestos_frmVentas.Text = "Impuestos";
+            // 
+            // lblTotal_frmVentas
+            // 
+            this.lblTotal_frmVentas.AutoSize = true;
+            this.lblTotal_frmVentas.Location = new System.Drawing.Point(12, 398);
+            this.lblTotal_frmVentas.Name = "lblTotal_frmVentas";
+            this.lblTotal_frmVentas.Size = new System.Drawing.Size(31, 13);
+            this.lblTotal_frmVentas.TabIndex = 23;
+            this.lblTotal_frmVentas.Text = "Total";
+            // 
+            // txtbxTotal_frmVentas
+            // 
+            this.txtbxTotal_frmVentas.Location = new System.Drawing.Point(86, 395);
+            this.txtbxTotal_frmVentas.Name = "txtbxTotal_frmVentas";
+            this.txtbxTotal_frmVentas.Size = new System.Drawing.Size(104, 20);
+            this.txtbxTotal_frmVentas.TabIndex = 24;
+            // 
+            // txtbxImpuestos_frmVentas
+            // 
+            this.txtbxImpuestos_frmVentas.Location = new System.Drawing.Point(86, 370);
+            this.txtbxImpuestos_frmVentas.Name = "txtbxImpuestos_frmVentas";
+            this.txtbxImpuestos_frmVentas.Size = new System.Drawing.Size(61, 20);
+            this.txtbxImpuestos_frmVentas.TabIndex = 25;
+            // 
             // frmVentas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(435, 384);
+            this.ClientSize = new System.Drawing.Size(453, 430);
+            this.Controls.Add(this.txtbxImpuestos_frmVentas);
+            this.Controls.Add(this.txtbxTotal_frmVentas);
+            this.Controls.Add(this.lblTotal_frmVentas);
+            this.Controls.Add(this.lblImpuestos_frmVentas);
+            this.Controls.Add(this.btnVender_frmVentas);
+            this.Controls.Add(this.lblSubTotal);
+            this.Controls.Add(this.txtbxSubTotal_frmVentas);
             this.Controls.Add(this.txtbxNombreTrabajador_frmVentas);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvVentas_frmVentas);
             this.Controls.Add(this.btnVerDetalle_frmVentas);
             this.Controls.Add(this.btnLimpiarDataViewVentas_frmVentas);
             this.Controls.Add(this.btnEliminarVentas_frmVentas);
@@ -248,7 +318,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmVentas";
             this.Load += new System.EventHandler(this.frmVentas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvVentas_frmVentas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -260,8 +330,6 @@
         private System.Windows.Forms.Label lblMuebleria_frmVentas;
         private System.Windows.Forms.Label lblTrabajaador_frmVentas;
         private System.Windows.Forms.Label lblFechaVenta_frmVentas;
-        private System.Windows.Forms.TextBox txtbxID_frmVentas;
-        private System.Windows.Forms.TextBox txtbxMuebleria_frmVentas;
         private System.Windows.Forms.TextBox txtbxTrabajador_frmVentas;
         private System.Windows.Forms.Button btnInsertar_Actualizar_frmVentas;
         private System.Windows.Forms.Button btnConsultar_frmVentas;
@@ -273,7 +341,16 @@
         private System.Windows.Forms.Button btnEliminarVentas_frmVentas;
         private System.Windows.Forms.Button btnLimpiarDataViewVentas_frmVentas;
         private System.Windows.Forms.Button btnVerDetalle_frmVentas;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvVentas_frmVentas;
         private System.Windows.Forms.TextBox txtbxNombreTrabajador_frmVentas;
+        private System.Windows.Forms.TextBox txtbxSubTotal_frmVentas;
+        private System.Windows.Forms.Label lblSubTotal;
+        private System.Windows.Forms.Button btnVender_frmVentas;
+        private System.Windows.Forms.Label lblImpuestos_frmVentas;
+        private System.Windows.Forms.Label lblTotal_frmVentas;
+        private System.Windows.Forms.TextBox txtbxTotal_frmVentas;
+        private System.Windows.Forms.TextBox txtbxImpuestos_frmVentas;
+        public System.Windows.Forms.TextBox txtbxID_frmVentas;
+        public System.Windows.Forms.TextBox txtbxMuebleria_frmVentas;
     }
 }
