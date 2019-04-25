@@ -288,9 +288,11 @@ namespace Proyecto_BDll
             this.Show();
         }
 
-        //Boton de VerDetalle
+        //Boton de VerDetalle - Consulta
        /* private void btnVerDetalle_frmVentas_Click(object sender, EventArgs e)
         {
+
+            //Aqui carga los datos que son los muebles de la muebleria con la cantidad y todos los datos pertinentes 
             //Crea los campos de la tabla
             DataTable dTableVentas = new DataTable();
             dTableVentas.Columns.Add("ID", typeof(int));
@@ -343,9 +345,41 @@ namespace Proyecto_BDll
             dgvVentas_frmVentas.DataSource = dTableVentas;
         }
         */
-        //Boton de Limpiar
+
+        //Boton de Limpiar tabla
         private void btnLimpiarDataViewVentas_frmVentas_Click(object sender, EventArgs e)
         {
+            dgvVentas_frmVentas.DataSource = "";
+        }
+
+        //Actualiacion cuando se agrega un valor a la tabla, se actualiza el subtotal
+        private void dgvVentas_frmVentas_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
+        {
+            //Aqui se requiere realizar el comando en donde los articulos que tiene en la tabla
+            //Se agrege la suma al txtbxsubTotal
+        }
+
+        //Actualizacion cuando se borra un valor de la tabla, se actualiza el subtotal
+        private void dgvVentas_frmVentas_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
+        {
+
+        }
+
+        //Actualizacion cuando se ingresa el impuesto en el txtbxImpuestos
+        private void txtbxImpuestos_frmVentas_TextChanged(object sender, EventArgs e)
+        {
+            //Aqui se requiere hacer la actualiacion del campo txtbxTotal
+            //Multiplicas el txtbxsubtotal y el de txtbximpuestos para sacar el valor.
+
+            //No se puede poner el impuesto mayor que 1 o 100%, ej. .8 = 80%, .08 = 8%, etc.
+
+        }
+
+        //Boton de vender
+        private void btnVender_frmVentas_Click(object sender, EventArgs e)
+        {
+            //Aqui ya guarda los datos de subtotal, impuestos y total en el registro correspondiente
+            //Puede mostrar una pantalla notificando de toda la info o no
 
         }
 
@@ -354,6 +388,12 @@ namespace Proyecto_BDll
         {
             this.Close();
         }
+
+
+
+
+
+
     }
 }   
 

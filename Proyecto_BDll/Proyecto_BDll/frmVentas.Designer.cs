@@ -218,6 +218,8 @@
             this.dgvVentas_frmVentas.Name = "dgvVentas_frmVentas";
             this.dgvVentas_frmVentas.Size = new System.Drawing.Size(431, 185);
             this.dgvVentas_frmVentas.TabIndex = 17;
+            this.dgvVentas_frmVentas.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvVentas_frmVentas_RowsAdded);
+            this.dgvVentas_frmVentas.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dgvVentas_frmVentas_RowsRemoved);
             // 
             // txtbxNombreTrabajador_frmVentas
             // 
@@ -250,6 +252,7 @@
             this.btnVender_frmVentas.TabIndex = 21;
             this.btnVender_frmVentas.Text = "Vender";
             this.btnVender_frmVentas.UseVisualStyleBackColor = true;
+            this.btnVender_frmVentas.Click += new System.EventHandler(this.btnVender_frmVentas_Click);
             // 
             // lblImpuestos_frmVentas
             // 
@@ -282,6 +285,7 @@
             this.txtbxImpuestos_frmVentas.Name = "txtbxImpuestos_frmVentas";
             this.txtbxImpuestos_frmVentas.Size = new System.Drawing.Size(61, 20);
             this.txtbxImpuestos_frmVentas.TabIndex = 25;
+            this.txtbxImpuestos_frmVentas.TextChanged += new System.EventHandler(this.txtbxImpuestos_frmVentas_TextChanged);
             // 
             // frmVentas
             // 

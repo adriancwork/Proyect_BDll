@@ -62,6 +62,9 @@ namespace Proyecto_BDll
                         //Inserta los valores en los campos en el frmTrabajadores
                         //txtbxMueblerNombre_frmVentas_Ingresar_Actualizar.Text = consultar_sqldatareader["Nombre_Mueble"].ToString(); //Puede tener errores
 
+
+                        //Linea 42,49,63 necestas el id del proveedor de la muebleria para poder usar la para hace el select del nombre del
+                        //mueble que se va mostrar en la tabla del dgv
                     }
                 }
                 else
@@ -85,7 +88,7 @@ namespace Proyecto_BDll
         //Actualizacion de Nombre cuando se cambie el ID del Mueble
         private void cmbbxIDMueble_frmVentas_Ingresar_Actualizar_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            
         }
 
         //Boton Cancelar
